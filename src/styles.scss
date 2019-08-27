@@ -1,2 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+
+.form-control{
+  border-radius: 0;
+  background-color: #f3e10e;
+  color: #000;
+  transition: all ease-in-out .2s;
+  padding: 1.2rem 2rem;
+  &::placeholder{
+    color: #000;
+  }
+  &:focus {
+    border-color: #fff;
+    background-color: #fff364;
+    outline: 0;
+    /* box-shadow: 0 0 0 0.2rem rgba(198, 101, 216, 0.2); */
+    box-shadow: none;
+  }
+}
+
+.btn-aprimary{
+  background-color: violet !important;
+  color: #fff;
+  padding: .7rem 2.5rem;
+}
