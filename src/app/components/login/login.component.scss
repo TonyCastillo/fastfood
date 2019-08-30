@@ -1,9 +1,11 @@
+@import "../../../variables.scss";
 
-@mixin absoluteCenter {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%)
+.title{
+  color: $rosado;
+  font-size: 35px;
+}
+p{
+  color: $gold;
 }
 .login-view{
   width: 100%;
@@ -26,9 +28,13 @@
   }
   .login-form{
     width: 80%;
-    border: solid 1px red;
     z-index: 15;
     @include absoluteCenter;
 
+  }
+  @media only screen and (min-width: 600px) {
+    .login-form{
+      width: 450px;
+    }
   }
 }

@@ -1,10 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
-
+@import "variables.scss";
 
 .form-control{
   border-radius: 0;
-  background-color: #f3e10e;
+  background-color: $gold;
   color: #000;
   transition: all ease-in-out .2s;
   padding: 1.2rem 2rem;
@@ -20,8 +20,4 @@
   }
 }
 
-.btn-aprimary{
-  background-color: violet !important;
-  color: #fff;
-  padding: .7rem 2.5rem;
-}
+

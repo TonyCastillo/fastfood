@@ -1,0 +1,18 @@
+
+$light_lila: #442464;
+$rosado: #ff0166;
+$black_lila: #33273f;
+$gold: #ffde5f;
+$celeste: #3d9be9;
+@mixin absoluteCenter {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%)
+}
+.btn-aprimary{
+  border:none;
+  background-color: $rosado;
+  color: #fff;
+  padding: .7rem 3.5rem;
+}
