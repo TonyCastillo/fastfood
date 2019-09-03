@@ -10,6 +10,12 @@ $celeste: #3d9be9;
   top: 50%;
   transform: translate(-50%, -50%)
 }
+@mixin imgObject($fit, $x, $y) {
+  width: 100%;
+  height: 100%;
+  object-fit: $fit;
+  object-position: $x $y;
+}
 .btn-aprimary{
   border:none;
   background-color: $rosado;
