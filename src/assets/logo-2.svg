@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="188" height="60" viewBox="0 0 188 60">
+    <g fill="none" fill-rule="evenodd" font-family="Oswald-Regular, Oswald">
+        <text fill="#FF0166" font-size="40" transform="translate(-33 -13)">
+            <tspan x="32.775" y="48">aula startup</tspan>
+        </text>
+        <text fill="#EFF21E" font-size="16" transform="translate(-33 -13)">
+            <tspan x="151.148" y="72">dashboard</tspan>
+        </text>
+    </g>
+</svg>

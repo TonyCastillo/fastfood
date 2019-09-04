@@ -3,7 +3,13 @@ $light_lila: #442464;
 $rosado: #ff0166;
 $black_lila: #33273f;
 $gold: #ffde5f;
+$yellow: #eff21e;
 $celeste: #3d9be9;
+
+$Oswald: 'Oswald', sans-serif;
+
+
+
 @mixin absoluteCenter {
   position: absolute;
   left: 50%;
@@ -19,6 +25,13 @@ $celeste: #3d9be9;
 .btn-aprimary{
   border:none;
   background-color: $rosado;
-  color: #fff;
   padding: .7rem 3.5rem;
+  border-radius: 0;
+  font-size: 15px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
 }
