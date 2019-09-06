@@ -1,48 +1,50 @@
 <div class="d-flex" id="wrapper">
 
   <!-- Sidebar -->
-  <div class="sidebar-wrapper" id="sidebar-wrapper">
-    <div class="sidebar-heading">
-      <div class="container px-4 pb-5">
-        <div class="logo"><img src="../../../assets/logo-2.svg" alt=""></div>
-        <div class="user">
-          <div class="avatar-img d-none d-md-block"><img src="../../../assets/background.jpg" alt=""></div>
-          <div class="user-data mx-auto mx-md-auto">
-            <h3 class="name">Juan Perez</h3>
-            <p>perez_juan@gmail.com</p>
-            <button class="btn btn-aprimary">
-              <div class="clip"></div> Cerrar Sesión
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container px-md-3 py-5 px-lg-4">
-      <div class="user-profile">
-        <h3 class="tittle">PERFIL PROFESIONAL</h3>
-        <div class="info-profile">
-          <h5>Especialidad:</h5>
-          <p>Estudiante de Economía - 4to semestre</p>
-        </div>
-        <div class="info-profile">
-          <h5>Lugar de estudio:</h5>
-          <p>Universidad Nacional de Asunción</p>
-        </div>
-        <div class="info-profile">
-          <h5>País:</h5>
-          <p><img src="" alt=""> Paraguay</p>
-        </div>
-        <div class="info-profile">
-          <h5>Intereses de carrera:</h5>
-          <p>Ventas  |  Comunicación</p>
-        </div>
-      </div>
-    </div>
+  <div class="sidebar-wrapper p-0" id="sidebar-wrapper">
+    <app-sidebar></app-sidebar>
   </div>
   <!-- /#sidebar-wrapper -->
 
   <!-- Page Content -->
   <div id="page-content-wrapper">
+    <div class="dash-content">
+        <h3 class="tittle">MIS EXPERIENCIAS (<span>10</span>)</h3>
+        <div class="container">
+            <div class="row">
+              <div class="col-md-5 border border-info mb-3">
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                  <a class="nav-tab active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">
+                    <div class="tab-card">
+                        <h2>Mejorando modelos de negocios</h2>
+                        <div class="footer">
+                          <p>Alumnos:</p>
+                          <div class="feature-alumnos">
+                            <img src="" alt="">
+                          </div>
+                          <div class="fecha">
+                            <p>Próxima sesión</p>
+                            <p>20/08/2019</p>
+                          </div>
+                        </div>
+                    </div>
+                  </a>
+                  <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
+                </div>
+              </div>
+              <div class="col-md-9 border border-success">
+                <div class="tab-content" id="v-pills-tabContent">
+                  <div class="tab-pane fade show" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                    <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas non quasi eveniet? Laboriosam, id ab?</h4>
+                  </div>
+                  <div class="tab-pane fade show" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile">
+                    <h4>Lorem  id ab?</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
 
     <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
       <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>

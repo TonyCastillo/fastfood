@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { LoginComponent } from './components/login/login.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { SidebarComponent } from './components/dashboard/sidebar/sidebar.component';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     CardsComponent,
     LoginComponent,
     DashboardComponent,
+    SidebarComponent,
   ],
   imports: [
     BrowserModule,

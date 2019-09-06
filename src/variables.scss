@@ -6,10 +6,17 @@ $gold: #ffde5f;
 $yellow: #eff21e;
 $celeste: #3d9be9;
 
+@font-face {
+  font-family: "Futura Medium";
+  src: url("/../src/assets/fonts/Futura-Medium.otf");
+}
 $Oswald: 'Oswald', sans-serif;
 
+$Futura: 'Futura Medium', sans-serif;
 
-
+p, a, span{
+  font-family: $Futura;
+}
 @mixin absoluteCenter {
   position: absolute;
   left: 50%;
