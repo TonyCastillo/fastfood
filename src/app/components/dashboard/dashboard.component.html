@@ -9,41 +9,55 @@
   <!-- Page Content -->
   <div id="page-content-wrapper">
     <div class="dash-content">
-        <h3 class="tittle">MIS EXPERIENCIAS (<span>10</span>)</h3>
-        <div class="container">
-            <div class="row">
-              <div class="col-md-5 border border-info mb-3">
-                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                  <a class="nav-tab active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">
-                    <div class="tab-card">
-                        <h2>Mejorando modelos de negocios</h2>
-                        <div class="footer">
-                          <p>Alumnos:</p>
-                          <div class="feature-alumnos">
-                            <img src="" alt="">
-                          </div>
-                          <div class="fecha">
-                            <p>Próxima sesión</p>
-                            <p>20/08/2019</p>
-                          </div>
-                        </div>
+      <h3 class="tittle">MIS EXPERIENCIAS (<span>10</span>)</h3>
+      <div class="container-fluid position-relative">
+        <div class="row">
+          <div class="col-lg-5 border border-info mb-3">
+            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+              <a class="nav-tab  my-2" *ngFor="let panel of paneles" data-toggle="pill" (click)='mostrar_close(panel)' href="#v-pills-home-{{ panel.id }}"
+                role="tab" aria-controls="v-pills-home" aria-selected="true" [ngClass]="{'active': panel.active}">
+                <div class="tab-card">
+                  <h2>{{ panel.titulo }}</h2>
+                  <div
+                    class="footer d-flex flex-column flex-wrap flex-lg-row align-items-center justify-content-around">
+                    <p>Alumnos:</p>
+                    <div class="feature-alumnos d-flex justify-content-center justify-content-lg-start">
+                      <div class="img-box">
+                        <img src="../../../assets/courses-icon-10.png" alt="">
+                      </div>
+                      <div class="img-box">
+                        <img src="../../../assets/courses-icon-10.png" alt="">
+                      </div>
+                      <div class="img-box">
+                        <img src="../../../assets/courses-icon-10.png" alt="">
+                      </div>
+                      <div class="img-box">
+                        <img src="../../../assets/courses-icon-10.png" alt="">
+                      </div>
+                      <p>+<span>8</span></p>
                     </div>
-                  </a>
-                  <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
-                </div>
-              </div>
-              <div class="col-md-9 border border-success">
-                <div class="tab-content" id="v-pills-tabContent">
-                  <div class="tab-pane fade show" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
-                    <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas non quasi eveniet? Laboriosam, id ab?</h4>
-                  </div>
-                  <div class="tab-pane fade show" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile">
-                    <h4>Lorem  id ab?</h4>
+                    <div class="fecha mt-3">
+                      <p>Próxima sesión</p>
+                      <p>20/08/2019</p>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </a>
+
             </div>
           </div>
+          <div class="col-lg-7 border border-success contenedor-panel">
+            <div class="tab-content" id="v-pills-tabContent">
+              <div class="tab-pane fade" *ngFor="let panel of paneles" [ngClass]="{'active show': panel.active}" id="v-pills-home-{{ panel.id }}" role="tabpanel"
+                aria-labelledby="v-pills-home-tab">
+                <h4>{{ panel.contenido }}</h4>
+                <button class="btn btn-primary" (click)="close_panel_responsive(panel)"> Cerrar </button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">

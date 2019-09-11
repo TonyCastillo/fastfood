@@ -57,14 +57,10 @@ body {
   padding: 20px 0;
   .tittle{
     font-family: $Oswald;
-    font-size: 25px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: normal;
+    font-size: 28px;
+    font-weight: 700;
     color: #000000;
-    text-align: center;
+    padding: 0 20px;
   }
 }
 
@@ -74,17 +70,26 @@ body {
   height: 100vh;
   overflow: hidden;
   .nav-tab{
+    background-color: #fff;
+    padding: .5rem 1rem;
+    position: relative;
+    transition: all ease-in-out .3s;
+    &::after{
+      content: '';
+      width: 10px;
+      height: 100%;
+      background-color: $celeste;
+      position: absolute;
+      left: 0;
+      top:0;
+      transition: all ease-in-out .3s;
+    }
     .tab-card{
       background-color: #fff;
-      padding: 1rem;
       h2{
         font-family: $Futura;
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 700;
-        font-style: normal;
-        font-stretch: normal;
-        line-height: normal;
-        letter-spacing: normal;
         color: $rosado;
       }
       .footer{
@@ -95,15 +100,67 @@ body {
           color: #4a4a4a;
           margin: 0;
         }
+        .feature-alumnos{
+          .img-box{
+            width: 40px;
+            height: 40px;
+            background-color: $black-lila;
+            border-radius: 50%;
+            margin: 2px;
+            img{
+              @include imgObject;
+            }
+          }
+        }
         .fecha p:last-child{
           font-weight: 400;
           color: #9b9b9b;
         }
       }
     }
+    &.active{
+      &::after{
+        background-color: $rosado;
+      }
+    }
+    @media only screen and (min-width: 1024px) {
+      .tab-card{
+        padding: 15px;
+      h2{
+        font-size: 20px;
+      }
+      .footer{
+        p{
+        }
+        .feature-alumnos{
+          .img-box{
+            width: 40px;
+            height: 40px;
+            background-color: $black-lila;
+            border-radius: 50%;
+            margin: 2px;
+            img{
+              @include imgObject;
+            }
+          }
+        }
+        .fecha p:last-child{
+          font-weight: 400;
+          color: #9b9b9b;
+        }
+      }
+      }
+    }
+  }
+  .contenedor-panel{
+    position: absolute;
+    left: 0;
+    top:0;
+    @media only screen and (min-width: 990px){
+      position: initial;
+    }
   }
   .tab-content{
-    position: relative;
     .tab-pane {
       width: 100%;
       border:solid 1px red;
@@ -112,6 +169,18 @@ body {
       &.active{
         position: relative;
         right: 0;
+      }
+    }
+    @media only screen and (min-width: 1024px){
+      .tab-pane {
+        width: 100%;
+        border:solid 1px red;
+        position: absolute;
+        right: -120%;
+        transition: all ease-in-out .3s;
+        &.active{
+          right: 0;
+        }
       }
     }
   }
