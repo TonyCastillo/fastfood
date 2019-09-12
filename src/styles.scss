@@ -1,7 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import "variables.scss";
-
+h1, h3, h3, h4{
+  font-family: $Oswald;
+}
+p{
+  margin-bottom: 5px;
+}
 .form-control{
   border-radius: 0;
   background-color: $gold;

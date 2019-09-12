@@ -9,10 +9,10 @@
   <!-- Page Content -->
   <div id="page-content-wrapper">
     <div class="dash-content">
-      <h3 class="tittle">MIS EXPERIENCIAS (<span>10</span>)</h3>
       <div class="container-fluid position-relative">
         <div class="row">
-          <div class="col-lg-5 border border-info mb-3">
+          <div class="col-lg-5 mb-3">
+            <h3 class="tittle mt-3">MIS EXPERIENCIAS (<span>10</span>)</h3>
             <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
               <a class="nav-tab  my-2" *ngFor="let panel of paneles" data-toggle="pill" (click)='mostrar_close(panel)' href="#v-pills-home-{{ panel.id }}"
                 role="tab" aria-controls="v-pills-home" aria-selected="true" [ngClass]="{'active': panel.active}">
@@ -46,12 +46,74 @@
 
             </div>
           </div>
-          <div class="col-lg-7 border border-success contenedor-panel">
+          <div class="col-lg-7 contenedor-panel p-0">
             <div class="tab-content" id="v-pills-tabContent">
               <div class="tab-pane fade" *ngFor="let panel of paneles" [ngClass]="{'active show': panel.active}" id="v-pills-home-{{ panel.id }}" role="tabpanel"
                 aria-labelledby="v-pills-home-tab">
-                <h4>{{ panel.contenido }}</h4>
-                <button class="btn btn-primary" (click)="close_panel_responsive(panel)"> Cerrar </button>
+                <div class="container">
+                    <div class="contenido-panel">
+                        <h4 class="title text-center">{{ panel.titulo }}</h4>
+                        <div class="container px-xl-5">
+                          <div class="row">
+                            <div class="col-md-6 my-2">
+                              <h5 class="title">Tutor:</h5>
+                              <div class="container-fluid">
+                                  <p class="subtitle">Emmanuel Block</p>
+                                  <p class="descrip">
+                                    Partnership Analyst at Associacao Nova Escola)
+                                  </p>
+                              </div>
+                            </div>
+                            <div class="col-md-6 my-2">
+                                <h5 class="title">Empresa:</h5>
+                                <div class="container-fluid">
+                                    <p class="subtitle">Infood</p>
+                                    <p class="descrip">
+                                        México | Agrotech
+                                    </p>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="container py-2 py-lg-4 px-xl-5 sesiones-container">
+                            <h5 class="title">Tutor:</h5>
+                          <div class="table">
+                              <table class="table table-hover">
+                                  <thead>
+                                    <tr>
+                                      <th scope="col"># Sesion</th>
+                                      <th scope="col">Fecha de inicio</th>
+                                      <th scope="col">Hora de sesión</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <th scope="row">1</th>
+                                      <td>Mark</td>
+                                      <td>Otto</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">2</th>
+                                      <td>Jacob</td>
+                                      <td>Thornton</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Jacob</td>
+                                        <td>Thornton</td>
+                                      </tr>
+                                    <tr>
+                                      <th scope="row">3</th>
+                                      <td colspan="2">Larry the Bird</td>
+                                      <td>@twitter</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                          </div>
+                        </div>
+                        <button class="btn btn-aprimary close-panel justify-content-center align-items-center" (click)="close_panel_responsive(panel)"> X </button>
+                      </div>
+                </div>
               </div>
 
             </div>
