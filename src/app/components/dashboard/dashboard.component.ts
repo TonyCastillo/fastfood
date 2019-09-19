@@ -31,6 +31,24 @@ export class DashboardComponent  {
       titulo: 'Te enseño a ser pesoca',
       contenido: 'soy pesoca',
       active: false,
+    },
+    {
+      id: 4,
+      titulo: 'Te enseño a ser pesoca',
+      contenido: 'soy pesoca',
+      active: false,
+    },
+    {
+      id: 5,
+      titulo: 'Te enseño a ser pesoca',
+      contenido: 'soy pesoca',
+      active: false,
+    }
+    ,{
+      id: 6,
+      titulo: 'Te enseño a ser pesoca',
+      contenido: 'soy pesoca',
+      active: false,
     }
   ];
   constructor() { }
