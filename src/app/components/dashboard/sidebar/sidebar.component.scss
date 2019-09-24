@@ -1,6 +1,27 @@
 @import "../../../../variables.scss";
 /* SIDEBAR STYLES */
 .contenedor-sidebar{
+  position: relative;
+  .button-toggle-sidebar{
+    width: 60px;
+    height: 60px;
+    background-color: #e8e8e8;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    position: absolute;
+    right: -24px;
+    top: -2px;
+    img{
+      width: 90%;
+    }
+    &:active, &:focus{
+      border:none;
+      outline: 0;
+    }
+  }
   .sidebar-heading{
     background-color: $light-lila;
     padding-top:20px;
