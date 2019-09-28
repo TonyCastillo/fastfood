@@ -1,8 +1,9 @@
-<div class="d-flex" id="wrapper">
-
+<div class="d-flex" [ngClass]='mostrar' id="wrapper">
   <!-- Sidebar -->
-  <div class="sidebar-wrapper p-0" id="sidebar-wrapper">
+  <div class="sidebar-wrapper p-0 position-relative" id="sidebar-wrapper">
+
     <app-sidebar></app-sidebar>
+    <button class="button-toggle-sidebar" (click)="clickEvent()"><img src="../../../assets/images/flecha-ico.svg" alt=""></button>
   </div>
   <!-- /#sidebar-wrapper -->
 

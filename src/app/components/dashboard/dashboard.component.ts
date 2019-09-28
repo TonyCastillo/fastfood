@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewInit, Output } from '@angular/core';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 interface panelInterface {
   id: Number;
@@ -11,7 +12,7 @@ interface panelInterface {
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })
-export class DashboardComponent  {
+export class DashboardComponent {
   panelActive = false;
   paneles: panelInterface[] = [
     {
@@ -51,11 +52,28 @@ export class DashboardComponent  {
       active: false,
     }
   ];
+
+  public mostrar:string = '';
+  hacerToggle : boolean = false;
+  public clickEvent(){
+    this.hacerToggle =! this.hacerToggle;
+    if(this.hacerToggle == true){
+      this.mostrar = 'toggled';
+    }else{
+      this.mostrar = '';
+    }
+  }
+
   constructor() { }
+
+
+
 
   close_panel_responsive(panel: panelInterface) {
     panel.active = false;
   }
+
+
 
 
   mostrar_close(panel: panelInterface) {
