@@ -17,50 +17,53 @@ export class DashboardComponent {
   paneles: panelInterface[] = [
     {
       id: 1,
-      titulo: 'Mejorando modelos de negocios',
+      titulo: 'Plan de Negocio – Una mirada práctica',
       contenido: 'esto es mejorandonegocios 1',
       active: true,
     },
     {
       id: 2,
-      titulo: 'Mejor forma de tony',
+      titulo: '5 formas de abrir tu negocio',
       contenido: 'esto es mejor forma de tony 2',
       active: false
     },
     {
       id: 3,
-      titulo: 'Te enseño a ser pesoca',
+      titulo: 'Posicionando tu marca en Paraguay',
       contenido: 'soy pesoca',
       active: false,
     },
     {
       id: 4,
-      titulo: 'Te enseño a ser pesoca',
+      titulo: 'Grupos de estudio o grupos focales',
       contenido: 'soy pesoca',
       active: false,
     },
     {
       id: 5,
-      titulo: 'Te enseño a ser pesoca',
+      titulo: 'Workshops',
       contenido: 'soy pesoca',
       active: false,
     }
     ,{
       id: 6,
-      titulo: 'Te enseño a ser pesoca',
+      titulo: 'Gestión del conocimiento',
       contenido: 'soy pesoca',
       active: false,
     }
   ];
 
   public mostrar:string = '';
+  public mostrar_btn:string = '';
   hacerToggle : boolean = false;
   public clickEvent(){
     this.hacerToggle =! this.hacerToggle;
     if(this.hacerToggle == true){
       this.mostrar = 'toggled';
+      this.mostrar_btn = 'toggled';
     }else{
       this.mostrar = '';
+      this.mostrar_btn = '';
     }
   }
 
