@@ -16,7 +16,7 @@ export class DashboardComponent  {
   paneles: panelInterface[] = [
     {
       id: 1,
-      titulo: 'Mejorando modelos de negocios',
+      titulo: 'Mejorando modelos',
       contenido: 'esto es mejorandonegocios 1',
       active: true,
     },
