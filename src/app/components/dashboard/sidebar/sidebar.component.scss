@@ -2,27 +2,6 @@
 /* SIDEBAR STYLES */
 .contenedor-sidebar{
   position: relative;
-  .button-toggle-sidebar{
-    width: 60px;
-    height: 60px;
-    background-color: #fff;
-    border-radius: 50%;
-    border: none;
-    display: flex;
-    justify-content: center;
-    align-items:center;
-    position: absolute;
-    right: -47px;
-    top: -13px;
-    img{
-      width: 50%;
-      transform: rotate(180deg)
-    }
-    &:active, &:focus{
-      border:none;
-      outline: 0;
-    }
-  }
   .sidebar-heading{
     background-color: $light-lila;
     padding-top:20px;

@@ -3,7 +3,44 @@
 body {
   overflow-x: hidden;
 }
-
+.button-toggle-sidebar{
+  width: 60px;
+  height: 60px;
+  background-color: #e8e8e8;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  position: absolute;
+  right: -54px;
+  top: -2px;
+  transition: all ease-in-out .3s;
+  z-index: 30;
+  transform: rotate(-180deg);
+  img{
+    width: 30px;
+    object-fit: contain;
+    object-position: center center;
+  }
+  &:active, &:focus{
+    border:none;
+    outline: 0;
+  }
+  &.toggled{
+    border-radius: 50%;
+    transform: rotate(0deg);
+  }
+  @media only screen and (min-width: 1024px){
+    right: -24px;
+    border-radius: 50% 0 0 50%;
+    transform: rotate(0deg);
+    &.toggled{
+      border-radius: 0 50% 50% 0;
+      transform: rotate(-180deg);
+    }
+  }
+}
 #sidebar-wrapper {
   min-height: 100vh;
   margin-left: -20rem;
@@ -41,7 +78,7 @@ body {
   }
 
   #wrapper.toggled #sidebar-wrapper {
-    margin-left: -15rem;
+    margin-left: -18rem;
   }
 }
 
@@ -86,10 +123,10 @@ body {
     .tab-card{
       background-color: #fff;
       h2{
-        font-family: #4a4a4a  ;
+        font-family: #4a4a4a ;
         font-size: 16px;
         font-weight: 700;
-        color: $rosado;
+        color: #4a4a4a;
       }
       .footer{
         p{
@@ -121,6 +158,12 @@ body {
       &::after{
         background-color: $rosado;
       }
+      .tab-card{
+        h2{
+          color: $rosado;
+        }
+      }
+
     }
     @media only screen and (min-width: 1024px) {
       .tab-card{
@@ -169,6 +212,7 @@ body {
       &.active{
         position: relative;
         right: 0;
+        z-index: 50;
       }
     }
     @media only screen and (min-width: 1024px){
