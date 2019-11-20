@@ -1,0 +1,40 @@
+@import "../../../variables.scss";
+
+.title{
+  color: $rosado;
+  font-size: 35px;
+}
+p{
+  color: $gold;
+}
+.login-view{
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url("../../../assets/background_psd.jpg");
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  &::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    opacity: .8;
+    z-index: 10;
+  }
+  .login-form{
+    width: 80%;
+    z-index: 15;
+    @include absoluteCenter;
+
+  }
+  @media only screen and (min-width: 600px) {
+    .login-form{
+      width: 450px;
+    }
+  }
+}

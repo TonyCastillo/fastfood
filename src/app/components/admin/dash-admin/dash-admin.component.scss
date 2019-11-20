@@ -1,0 +1,341 @@
+@import "../../../../variables.scss";
+
+body {
+  overflow-x: hidden;
+}
+.button-toggle-sidebar{
+  width: 60px;
+  height: 60px;
+  background-color: #e8e8e8;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  position: absolute;
+  right: -54px;
+  top: -2px;
+  transition: all ease-in-out .3s;
+  z-index: 30;
+  transform: rotate(-180deg);
+  img{
+    width: 30px;
+    object-fit: contain;
+    object-position: center center;
+  }
+  &:active, &:focus{
+    border:none;
+    outline: 0;
+  }
+  &.toggled{
+    border-radius: 50%;
+    transform: rotate(0deg);
+  }
+  @media only screen and (min-width: 1024px){
+    right: -24px;
+    border-radius: 50% 0 0 50%;
+    transform: rotate(0deg);
+    &.toggled{
+      border-radius: 0 50% 50% 0;
+      transform: rotate(-180deg);
+    }
+  }
+}
+#sidebar-wrapper {
+  min-height: 100vh;
+  margin-left: -20rem;
+  -webkit-transition: margin .25s ease-out;
+  -moz-transition: margin .25s ease-out;
+  -o-transition: margin .25s ease-out;
+  transition: margin .25s ease-out;
+}
+
+#sidebar-wrapper .sidebar-heading {
+  padding: 0.875rem 1.25rem;
+  font-size: 1.2rem;
+}
+
+#sidebar-wrapper .list-group {
+  width: 15rem;
+}
+
+#page-content-wrapper {
+  min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+}
+
+@media (min-width: 1024px) {
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -18rem;
+  }
+}
+
+
+
+/* SIDEBAR STYLES */
+.sidebar-wrapper{
+  width: 350px;
+  background-color: $black-lila;
+}
+#page-content-wrapper{
+  background-color: #e8e8e8;
+  .tittle{
+    font-family: $Oswald;
+    font-size: 28px;
+    font-weight: 700;
+    color: #000000;
+    padding: 0 20px;
+    margin-top: 40px;
+  }
+}
+
+/* DASH CONTENT SYLES */
+.dash-content{
+  width: 100%;
+  min-height: 100vh;
+  .nav-tab{
+    background-color: #fff;
+    padding: .5rem 1rem;
+    position: relative;
+    transition: all ease-in-out .3s;
+    &::after{
+      content: '';
+      width: 10px;
+      height: 100%;
+      background-color: $celeste;
+      position: absolute;
+      left: 0;
+      top:0;
+      transition: all ease-in-out .3s;
+    }
+    .tab-card{
+      background-color: #fff;
+      h2{
+        font-family: #4a4a4a ;
+        font-size: 16px;
+        font-weight: 700;
+        color: #4a4a4a;
+      }
+      .footer{
+        p{
+          font-size: 12px;
+          font-weight: 700;
+          letter-spacing: normal;
+          color: #4a4a4a;
+          margin: 0;
+        }
+        .feature-alumnos{
+          .img-box{
+            width: 40px;
+            height: 40px;
+            background-color: $black-lila;
+            border-radius: 50%;
+            margin: 2px;
+            img{
+              @include imgObject;
+            }
+          }
+        }
+        .fecha p:last-child{
+          font-weight: 400;
+          color: #9b9b9b;
+        }
+      }
+    }
+    &.active{
+      &::after{
+        background-color: $rosado;
+      }
+      .tab-card{
+        h2{
+          color: $rosado;
+        }
+      }
+
+    }
+    @media only screen and (min-width: 1024px) {
+      .tab-card{
+        padding: 15px;
+      h2{
+        font-size: 20px;
+      }
+      .footer{
+        p{
+        }
+        .feature-alumnos{
+          .img-box{
+            width: 40px;
+            height: 40px;
+            background-color: $black-lila;
+            border-radius: 50%;
+            margin: 2px;
+            img{
+              @include imgObject;
+            }
+          }
+        }
+        .fecha p:last-child{
+          font-weight: 400;
+          color: #9b9b9b;
+        }
+      }
+      }
+    }
+  }
+  .contenedor-panel{
+    position: absolute;
+    left: 0;
+    top:0;
+    @media only screen and (min-width: 990px){
+      position: initial;
+    }
+  }
+  .tab-content{
+    .tab-pane {
+      width: 100%;
+      min-height: 100vh;
+      background-color: #fff;
+      position: absolute;
+      right: -120%;
+      &.active{
+        position: relative;
+        right: 0;
+        z-index: 50;
+      }
+    }
+    @media only screen and (min-width: 1024px){
+      .tab-pane {
+        width: 100%;
+        position: absolute;
+        right: -120%;
+        transition: all ease-in-out .3s;
+        &.active{
+          right: 0;
+        }
+      }
+    }
+  }
+  .contenido-panel{
+    padding: 30px 0;
+    button.close-panel{
+      width: 50px;
+      height: 50px;
+      display: flex;
+      border-radius: 0 25px 25px 25px;
+      position: absolute;
+      left: 0;
+      top:0;
+      padding: 0;
+    }
+    h4.title{
+      width: 80%;
+      margin: 15px auto;
+      padding: 5px 10px 10px;
+      font-size: 28px;
+      font-weight: normal;
+      text-align: center;
+      color: #4a4a4a;
+
+      border-radius: 30px;
+    }
+    h5.title{
+      font-family: $Oswald;
+      font-size: 25px;
+      letter-spacing: normal;
+      color: #4a4a4a;
+      margin-bottom: 15px;
+    }
+    p.subtitle{
+      font-family: $Futura;
+      font-size: 18px;
+      font-weight: 500;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: #4a4a4a;
+      margin-bottom: 10px;
+    }
+    p.descrip{
+      font-family: $Futura;
+      font-size: 15px;
+      font-weight: 500;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: #9b9b9b;
+    }
+    .sesiones-container{
+      .table{
+        width: 100%;
+        height: auto;
+        counter-reset: sessionNumber;
+        p{
+            font-family: $Futura;
+            font-size: 12px;
+            font-weight: 500;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #9b9b9b;
+        }
+        p.title{
+          font-size: 12px;
+          font-family: $Futura;
+          font-weight: 500;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: normal;
+          letter-spacing: normal;
+          color: #4a4a4a;
+        }
+        .box-sessiontime{
+          width: 45px;
+          height: 40px;
+          background-color: $rosado;
+          position: relative;
+          &::before {
+            counter-increment: sessionNumber;
+            content: counter(sessionNumber);
+            @include absoluteCenter;
+            font-family: $Oswald;
+            font-size: 13px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: center;
+            color: #ffffff;
+          }
+        }
+      }
+    }
+    @media only screen and (min-width: 600px){
+      h4.title{
+        font-size: 32px;
+        border: solid 2px #979797;
+      }
+
+    }
+    @media only screen and (min-width: 992px){
+      button.close-panel{
+        display: none;
+      }
+    }
+  }
+}
