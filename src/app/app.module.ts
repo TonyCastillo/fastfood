@@ -1,3 +1,4 @@
+import { environment } from './../environments/environment';
 import { HttpClientModule } from '@angular/common/http';
 import { CardsComponent } from './components/cards/cards.component';
 import { AppMaterialModule } from './app-material/app-material.module';
@@ -15,6 +16,8 @@ import { PaisComponent } from './paises/pais/pais.component';
 import { PaisesListComponent } from './paises/paises-list/paises-list.component';
 import { RegisterUserComponent } from './components/register-user/register-user.component';
 import { DashAdminComponent } from './components/admin/dash-admin/dash-admin.component';
+import { AngularFireModule } from '@angular/fire';
+
 
 
 @NgModule({
@@ -35,6 +38,7 @@ import { DashAdminComponent } from './components/admin/dash-admin/dash-admin.com
     BrowserAnimationsModule,
     AppMaterialModule,
     HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
   ],
   providers: [],
   bootstrap: [AppComponent]

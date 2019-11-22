@@ -1,5 +1,12 @@
+import { AuthService } from './../../services/auth.service';
 import { Component, OnInit } from '@angular/core';
 
+
+export interface UserInterface {
+  name: String;
+  email: String;
+  password: String;
+}
 @Component({
   selector: 'app-register-user',
   templateUrl: './register-user.component.html',
@@ -7,9 +14,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterUserComponent implements OnInit {
 
-  constructor() { }
+  constructor( private authService: AuthService) {
 
-  ngOnInit() {
   }
+
+  private user: UserInterface = {
+    name: '',
+    email: '',
+    password: '',
+  };
+
+  ngOnInit( ) {
+  }
+
+  /* onRegister(): void{
+    this.authService.registerUser();
+  } */
 
 }
